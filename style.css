@@ -1,78 +1,90 @@
-/* Style général */
-body {
-  font-family: Arial, sans-serif;
+/* Reset de base */
+* {
   margin: 0;
   padding: 0;
-  background-image: url('fond-ville.jpg'); /* Remplace par le nom réel de l'image */
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Corps */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdf8f3;
+  color: #333;
 }
 
 /* En-tête */
-header {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+.header {
+  background-color: #be9b6c;
+  padding: 20px 0;
+  color: white;
   text-align: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
+.site-title {
+  font-size: 2em;
 }
 
-/* Menu de navigation */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 10px;
+/* Navigation */
+.nav-menu {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  list-style: none;
+  background-color: #8b6f47;
+  padding: 10px 0;
 }
 
-nav ul li {
-  display: inline;
+.nav-menu li {
+  margin: 0 15px;
 }
 
-nav ul li a {
+.nav-menu a {
+  color: white;
   text-decoration: none;
-  color: #ffdd57;
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #ffdd57;
-  color: #000;
+.nav-menu a:hover {
+  color: #ffeac7;
 }
 
-/* Contenu principal */
-main {
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin: 20px;
-  border-radius: 10px;
+/* Section principale */
+.main-content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #6b4c2e;
+}
+
+.intro p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: auto;
 }
 
 /* Pied de page */
-footer {
-  background-color: rgba(0, 0, 0, 0.8);
+.footer {
+  background-color: #333;
+  color: #ddd;
   text-align: center;
-  padding: 15px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 15px 0;
   margin-top: 40px;
 }
 .patrimoine-list {
@@ -104,4 +116,3 @@ footer {
   object-fit: cover;
   border-radius: 6px;
 }
-
