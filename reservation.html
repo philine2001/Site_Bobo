@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réservation d'hôtel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="image/logo.jpg" alt="Logo Bobo" class="logo">
+  <h1>Réserver un hôtel à Bobo-Dioulasso</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="patrimoine.html">Patrimoine</a></li>
+      <li><a href="reservation.html">Réservation d'hôtel</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Formulaire de réservation</h2>
+  <form id="form-reservation" style="background-color: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;">
+    <label for="nom">Nom :</label><br>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="prenom">Prénom :</label><br>
+    <input type="text" id="prenom" name="prenom" required><br><br>
+
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="tel">Téléphone :</label><br>
+    <input type="tel" id="tel" name="tel" required><br><br>
+
+    <label for="arrivee">Date d'arrivée :</label><br>
+    <input type="date" id="arrivee" name="arrivee" required><br><br>
+
+    <label for="depart">Date de départ :</label><br>
+    <input type="date" id="depart" name="depart" required><br><br>
+
+    <label for="chambre">Type de chambre :</label><br>
+    <select id="chambre" name="chambre" required>
+      <option value="">--Choisissez--</option>
+      <option value="simple">Simple</option>
+      <option value="double">Double</option>
+      <option value="suite">Suite</option>
+    </select><br><br>
+
+    <label for="commentaire">Autres informations :</label><br>
+    <textarea id="commentaire" name="commentaire" rows="4"></textarea><br><br>
+
+    <button type="submit">Envoyer la demande</button>
+  </form>
+</main>
+
+<!-- 🔽 SCRIPT ALERT -->
+<script>
+  document.getElementById("form-reservation").addEventListener("submit", function(e) {
+    e.preventDefault(); // empêche le rechargement
+    alert("✅ Votre demande de réservation a bien été envoyée !");
+    this.reset(); 
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 Ville de Bobo-Dioulasso. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
