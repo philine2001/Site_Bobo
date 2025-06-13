@@ -6,19 +6,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <h2>Formulaire de réservation</h2>
-
-  <form name="reservation" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="reservation">
-
+  <form method="POST" action="envoyer.php">
     <label>Nom: <input type="text" name="nom" required></label><br>
     <label>Prénom: <input type="text" name="prenom" required></label><br>
     <label>Email: <input type="email" name="email" required></label><br>
     <label>Téléphone: <input type="tel" name="tel" required></label><br>
     <label>Date d'arrivée: <input type="date" name="arrivee" required></label><br>
     <label>Date de départ: <input type="date" name="depart" required></label><br>
-
     <label>Type de chambre:
       <select name="chambre" required>
         <option value="">--Choisissez--</option>
@@ -27,13 +22,10 @@
         <option value="suite">Suite</option>
       </select>
     </label><br>
-
     <label>Commentaire:<br>
       <textarea name="commentaire"></textarea>
     </label><br>
-
     <button type="submit">Envoyer</button>
   </form>
-
 </body>
 </html>
